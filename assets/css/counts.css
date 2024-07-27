@@ -1,0 +1,37 @@
+.counts {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding: 0 10px;
+}
+
+.counts__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: var(--light);
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.counts__number {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+@media screen and (max-width: 1024px) {
+  .counts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .counts__item {
+    width: 100%;
+  }
+}

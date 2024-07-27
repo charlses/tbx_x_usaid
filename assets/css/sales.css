@@ -1,0 +1,127 @@
+.sales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 60px 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.sales__grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+.sales__item {
+  position: relative;
+  border-radius: 6px;
+}
+
+.img__card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.img__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.img__card:hover img {
+  transform: scale(1.02);
+}
+
+.img__card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.img__card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.see__more__btn {
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  font-weight: 400;
+  font-size: 14px;
+  gap: 6px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  transition: color 0.25s ease-in-out;
+}
+
+.sales__item:nth-child(1) {
+  height: 250px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.sales__item:nth-child(2) {
+  height: 250px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.sales__item:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3; /* Span both rows */
+  height: 100%; /* Ensure it spans both rows */
+}
+
+@media screen and (max-width: 767px) {
+  .sales__grid {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .sales__item {
+    flex: 0 0 auto; /* Ensure items maintain their size */
+    width: 300px;
+    height: 300px;
+  }
+
+  .img__card {
+    height: 100%;
+  }
+
+  .img__card__content {
+    padding: 10px;
+  }
+
+  .img__card img {
+    height: 100%;
+  }
+  .sales__item:nth-child(1),
+  .sales__item:nth-child(2),
+  .sales__item:nth-child(3) {
+    height: 300px;
+  }
+}
