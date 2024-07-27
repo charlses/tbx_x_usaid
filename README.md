@@ -30,7 +30,7 @@ This project is a clone of the [tbcconcept.ge](https://tbcconcept.ge/ge) website
 
 - **HTML:** Structure and content of the web pages.
 - **CSS:** Styling and layout of the web pages.
-  - `app.css`: General styles for the app section.
+  - `app.css`: Styles for the app section.
   - `counts.css`: Styles for counts section.
   - `footer.css`: Styles for the footer section.
   - `globals.css`: Global styles used throughout the website.
